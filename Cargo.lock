@@ -408,7 +408,7 @@ dependencies = [
 [[package]]
 name = "dev-utils"
 version = "0.1.0"
-source = "git+https://github.com/loro-dev/loro.git?tag=loro-crdt@1.0.0-alpha.5#cd36b5b656beb7bf433f40926b5330b49bb8a324"
+source = "git+https://github.com/loro-dev/loro.git?tag=loro-crdt@1.0.0-beta.1#00775d3bcdf98d279ba30b87dd94c3c6b62e3036"
 dependencies = [
  "chrono",
  "color-backtrace",
@@ -834,7 +834,7 @@ dependencies = [
 [[package]]
 name = "loro"
 version = "0.16.12"
-source = "git+https://github.com/loro-dev/loro.git?tag=loro-crdt@1.0.0-alpha.5#cd36b5b656beb7bf433f40926b5330b49bb8a324"
+source = "git+https://github.com/loro-dev/loro.git?tag=loro-crdt@1.0.0-beta.1#00775d3bcdf98d279ba30b87dd94c3c6b62e3036"
 dependencies = [
  "enum-as-inner 0.6.0",
  "generic-btree",
@@ -880,7 +880,7 @@ dependencies = [
 [[package]]
 name = "loro-common"
 version = "0.16.12"
-source = "git+https://github.com/loro-dev/loro.git?tag=loro-crdt@1.0.0-alpha.5#cd36b5b656beb7bf433f40926b5330b49bb8a324"
+source = "git+https://github.com/loro-dev/loro.git?tag=loro-crdt@1.0.0-beta.1#00775d3bcdf98d279ba30b87dd94c3c6b62e3036"
 dependencies = [
  "arbitrary",
  "enum-as-inner 0.6.0",
@@ -922,7 +922,7 @@ dependencies = [
 [[package]]
 name = "loro-delta"
 version = "0.16.12"
-source = "git+https://github.com/loro-dev/loro.git?tag=loro-crdt@1.0.0-alpha.5#cd36b5b656beb7bf433f40926b5330b49bb8a324"
+source = "git+https://github.com/loro-dev/loro.git?tag=loro-crdt@1.0.0-beta.1#00775d3bcdf98d279ba30b87dd94c3c6b62e3036"
 dependencies = [
  "arrayvec",
  "enum-as-inner 0.5.1",
@@ -1001,7 +1001,7 @@ dependencies = [
 [[package]]
 name = "loro-internal"
 version = "0.16.12"
-source = "git+https://github.com/loro-dev/loro.git?tag=loro-crdt@1.0.0-alpha.5#cd36b5b656beb7bf433f40926b5330b49bb8a324"
+source = "git+https://github.com/loro-dev/loro.git?tag=loro-crdt@1.0.0-beta.1#00775d3bcdf98d279ba30b87dd94c3c6b62e3036"
 dependencies = [
  "append-only-bytes",
  "arref",
@@ -1042,7 +1042,7 @@ dependencies = [
 [[package]]
 name = "loro-kv-store"
 version = "0.16.2"
-source = "git+https://github.com/loro-dev/loro.git?tag=loro-crdt@1.0.0-alpha.5#cd36b5b656beb7bf433f40926b5330b49bb8a324"
+source = "git+https://github.com/loro-dev/loro.git?tag=loro-crdt@1.0.0-beta.1#00775d3bcdf98d279ba30b87dd94c3c6b62e3036"
 dependencies = [
  "bytes",
  "ensure-cov",
@@ -1084,7 +1084,7 @@ dependencies = [
 [[package]]
 name = "loro-rle"
 version = "0.16.12"
-source = "git+https://github.com/loro-dev/loro.git?tag=loro-crdt@1.0.0-alpha.5#cd36b5b656beb7bf433f40926b5330b49bb8a324"
+source = "git+https://github.com/loro-dev/loro.git?tag=loro-crdt@1.0.0-beta.1#00775d3bcdf98d279ba30b87dd94c3c6b62e3036"
 dependencies = [
  "append-only-bytes",
  "arref",
@@ -1114,7 +1114,7 @@ dependencies = [
 [[package]]
 name = "loro_fractional_index"
 version = "0.16.12"
-source = "git+https://github.com/loro-dev/loro.git?tag=loro-crdt@1.0.0-alpha.5#cd36b5b656beb7bf433f40926b5330b49bb8a324"
+source = "git+https://github.com/loro-dev/loro.git?tag=loro-crdt@1.0.0-beta.1#00775d3bcdf98d279ba30b87dd94c3c6b62e3036"
 dependencies = [
  "imbl",
  "once_cell",
