@@ -41,11 +41,11 @@ pub fn main() {
     println!();
     println!();
 
-    let mdTable = Table::new(rows)
+    let md_table = Table::new(rows)
         .with(tabled::settings::merge::Merge::vertical())
         .with(Style::markdown())
         .to_string();
-    println!("{}", mdTable);
+    println!("{}", md_table);
 }
 
 #[derive(tabled::Tabled, Clone)]
