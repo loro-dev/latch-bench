@@ -1,8 +1,11 @@
 # Loro Benchmark on Real-World Data from Latch.bio
 
-The benchmarks below were conducted using a real-world editing history from latch.bio, encompassing 1,659,541 operations.
+This repository contains benchmarks demonstrating the performance improvements
+in importing docs for Loro version 1.0.
 
-These benchmarks were executed on a MacBook Pro M1 2020.
+The following benchmarks were conducted using a real-world editing history from
+latch.bio, comprising 1,659,541 operations. All benchmarks results below were
+performed on a MacBook Pro M1 2020.
 
 | name                             | task                            | time                     |
 | -------------------------------- | ------------------------------- | ------------------------ |
