@@ -55,7 +55,7 @@ fn bench_version<F>(
             for _ in 0..iters {
                 let start = Instant::now();
                 let doc = LoroDoc::new();
-                doc.import(input).unwrap();
+                doc.import(black_box(input)).unwrap();
                 total += start.elapsed();
                 black_box(doc);
             }
@@ -69,10 +69,11 @@ fn bench_version<F>(
             for _ in 0..iters {
                 let start = Instant::now();
                 let doc = LoroDoc::new();
-                doc.import(input).unwrap();
-                doc.get_deep_value();
+                doc.import(black_box(input)).unwrap();
+                let value = doc.get_deep_value();
                 total += start.elapsed();
                 black_box(doc);
+                black_box(value);
             }
             total
         });
@@ -84,8 +85,8 @@ fn bench_version<F>(
             for _ in 0..iters {
                 let start = Instant::now();
                 let doc = LoroDoc::new();
-                doc.import(input).unwrap();
-                doc.get_deep_value();
+                doc.import(black_box(input)).unwrap();
+                let value = doc.get_deep_value();
                 let list = doc.get_list("cells");
                 let cell = list.push_container(LoroMap::new()).unwrap();
                 cell.insert("cellType", "markdown").unwrap();
@@ -94,6 +95,7 @@ fn bench_version<F>(
                 doc.commit();
                 total += start.elapsed();
                 black_box(doc);
+                black_box(value);
             }
             total
         });
@@ -105,8 +107,8 @@ fn bench_version<F>(
             for _ in 0..iters {
                 let start = Instant::now();
                 let doc = LoroDoc::new();
-                doc.import(input).unwrap();
-                doc.get_deep_value();
+                doc.import(black_box(input)).unwrap();
+                let value = doc.get_deep_value();
                 let list = doc.get_list("cells");
                 let cell = list.push_container(LoroMap::new()).unwrap();
                 cell.insert("cellType", "markdown").unwrap();
@@ -117,6 +119,7 @@ fn bench_version<F>(
                 black_box(snapshot);
                 total += start.elapsed();
                 black_box(doc);
+                black_box(value);
             }
             total
         });
@@ -137,7 +140,7 @@ fn bench_version_016<F>(
             for _ in 0..iters {
                 let start = Instant::now();
                 let doc = loro_016::LoroDoc::new();
-                doc.import(input).unwrap();
+                doc.import(black_box(input)).unwrap();
                 total += start.elapsed();
                 black_box(doc);
             }
@@ -151,10 +154,11 @@ fn bench_version_016<F>(
             for _ in 0..iters {
                 let start = Instant::now();
                 let doc = loro_016::LoroDoc::new();
-                doc.import(input).unwrap();
-                doc.get_deep_value();
+                doc.import(black_box(input)).unwrap();
+                let value = doc.get_deep_value();
                 total += start.elapsed();
                 black_box(doc);
+                black_box(value);
             }
             total
         });
@@ -166,8 +170,8 @@ fn bench_version_016<F>(
             for _ in 0..iters {
                 let start = Instant::now();
                 let doc = loro_016::LoroDoc::new();
-                doc.import(input).unwrap();
-                doc.get_deep_value();
+                doc.import(black_box(input)).unwrap();
+                let value = doc.get_deep_value();
                 let list = doc.get_list("cells");
                 let cell = list.push_container(loro_016::LoroMap::new()).unwrap();
                 cell.insert("cellType", "markdown").unwrap();
@@ -178,6 +182,7 @@ fn bench_version_016<F>(
                 doc.commit();
                 total += start.elapsed();
                 black_box(doc);
+                black_box(value);
             }
             total
         });
@@ -189,8 +194,8 @@ fn bench_version_016<F>(
             for _ in 0..iters {
                 let start = Instant::now();
                 let doc = loro_016::LoroDoc::new();
-                doc.import(input).unwrap();
-                doc.get_deep_value();
+                doc.import(black_box(input)).unwrap();
+                let value = doc.get_deep_value();
                 let list = doc.get_list("cells");
                 let cell = list.push_container(loro_016::LoroMap::new()).unwrap();
                 cell.insert("cellType", "markdown").unwrap();
@@ -203,6 +208,7 @@ fn bench_version_016<F>(
                 black_box(snapshot);
                 total += start.elapsed();
                 black_box(doc);
+                black_box(value);
             }
             total
         });
