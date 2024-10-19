@@ -7,24 +7,24 @@ The following benchmarks were conducted using a real-world editing history from
 latch.bio, comprising 1,659,541 operations. All benchmarks results below were
 performed on a MacBook Pro M1 2020.
 
-| name                             | task                            | time                     |
-| -------------------------------- | ------------------------------- | ------------------------ |
-| 0 Old Snapshot Format on 0.16.12 | Import                          | 15.785373ms +- 19.596µs  |
-|                                  | Import+GetAllValues             | 15.848977ms +- 26.184µs  |
-|                                  | Import+GetAllValues+Edit        | 16.352828ms +- 119.143µs |
-|                                  | Import+GetAllValues+Edit+Expo   | 30.745277ms +- 58.265µs  |
-| 1 Old Snapshot Format on 1.0.0   | Import                          | 16.358149ms +- 27.291µs  |
-|                                  | Import+GetAllValues             | 16.185157ms +- 26.305µs  |
-|                                  | Import+GetAllValues+Edit        | 16.293045ms +- 21.654µs  |
-|                                  | Import+GetAllValues+Edit+Export | 31.146791ms +- 66.619µs  |
-| 2 New Snapshot Format            | Import                          | 1.125041ms +- 11.812µs   |
-|                                  | Import+GetAllValues             | 1.120306ms +- 12.544µs   |
-|                                  | Import+GetAllValues+Edit        | 1.186773ms +- 49.587µs   |
-|                                  | Import+GetAllValues+Edit+Export | 5.44709ms +- 77.165µs    |
-| 3 Shallow Snapshot Format        | Import                          | 347.397µs +- 2.189µs     |
-|                                  | Import+GetAllValues             | 371.521µs +- 2.893µs     |
-|                                  | Import+GetAllValues+Edit        | 202.047µs +- 10.058µs    |
-|                                  | Import+GetAllValues+Edit+Export | 818.688µs +- 2.395µs     |
+| name                             | task                            | time                    |
+| -------------------------------- | ------------------------------- | ----------------------- |
+| 0 Old Snapshot Format on 0.16.12 | Import                          | 17.339081ms +- 29.8µs   |
+|                                  | Import+GetAllValues             | 17.395361ms +- 43.714µs |
+|                                  | Import+GetAllValues+Edit        | 17.463965ms +- 26.334µs |
+|                                  | Import+GetAllValues+Edit+Expo   | 32.388292ms +- 56.006µs |
+| 1 Old Snapshot Format on 1.0.0   | Import                          | 16.882856ms +- 34.296µs |
+|                                  | Import+GetAllValues             | 16.820565ms +- 30.189µs |
+|                                  | Import+GetAllValues+Edit        | 16.934977ms +- 36.064µs |
+|                                  | Import+GetAllValues+Edit+Export | 31.161731ms +- 80.663µs |
+| 2 New Snapshot Format            | Import                          | 1.150184ms +- 10.06µs   |
+|                                  | Import+GetAllValues             | 1.192459ms +- 12.164µs  |
+|                                  | Import+GetAllValues+Edit        | 1.208262ms +- 12.034µs  |
+|                                  | Import+GetAllValues+Edit+Export | 5.46355ms +- 77.198µs   |
+| 3 Shallow Snapshot Format        | Import                          | 374.98µs +- 8.472µs     |
+|                                  | Import+GetAllValues             | 375.227µs +- 1.596µs    |
+|                                  | Import+GetAllValues+Edit        | 374.859µs +- 1.398µs    |
+|                                  | Import+GetAllValues+Edit+Export | 843.65µs +- 5.116µs     |
 
 ```log
 

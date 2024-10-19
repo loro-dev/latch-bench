@@ -51,39 +51,34 @@ fn bench_version<F>(
 {
     group.bench_function(format!("{} - Import", name), |b| {
         b.iter_custom(|iters| {
-            let mut total = std::time::Duration::ZERO;
+            let start = Instant::now();
             for _ in 0..iters {
-                let start = Instant::now();
                 let doc = LoroDoc::new();
                 doc.import(black_box(input)).unwrap();
-                total += start.elapsed();
                 black_box(doc);
             }
-            total
+            start.elapsed()
         });
     });
 
     group.bench_function(format!("{} - Import+GetAllValues", name), |b| {
         b.iter_custom(|iters| {
-            let mut total = std::time::Duration::ZERO;
+            let start = Instant::now();
             for _ in 0..iters {
-                let start = Instant::now();
                 let doc = LoroDoc::new();
                 doc.import(black_box(input)).unwrap();
                 let value = doc.get_deep_value();
-                total += start.elapsed();
                 black_box(doc);
                 black_box(value);
             }
-            total
+            start.elapsed()
         });
     });
 
     group.bench_function(format!("{} - Import+GetAllValues+Edit", name), |b| {
         b.iter_custom(|iters| {
-            let mut total = std::time::Duration::ZERO;
+            let start = Instant::now();
             for _ in 0..iters {
-                let start = Instant::now();
                 let doc = LoroDoc::new();
                 doc.import(black_box(input)).unwrap();
                 let value = doc.get_deep_value();
@@ -93,19 +88,18 @@ fn bench_version<F>(
                 let text = cell.insert_container("source", LoroText::new()).unwrap();
                 text.insert(0, "Hello world!").unwrap();
                 doc.commit();
-                total += start.elapsed();
                 black_box(doc);
                 black_box(value);
+                black_box(text);
             }
-            total
+            start.elapsed()
         });
     });
 
     group.bench_function(format!("{} - Import+GetAllValues+Edit+Export", name), |b| {
         b.iter_custom(|iters| {
-            let mut total = std::time::Duration::ZERO;
+            let start = Instant::now();
             for _ in 0..iters {
-                let start = Instant::now();
                 let doc = LoroDoc::new();
                 doc.import(black_box(input)).unwrap();
                 let value = doc.get_deep_value();
@@ -117,11 +111,11 @@ fn bench_version<F>(
                 doc.commit();
                 let snapshot = export_fn(&doc);
                 black_box(snapshot);
-                total += start.elapsed();
                 black_box(doc);
                 black_box(value);
+                black_box(text);
             }
-            total
+            start.elapsed()
         });
     });
 }
@@ -136,39 +130,34 @@ fn bench_version_016<F>(
 {
     group.bench_function(format!("{} - Import", name), |b| {
         b.iter_custom(|iters| {
-            let mut total = std::time::Duration::ZERO;
+            let start = Instant::now();
             for _ in 0..iters {
-                let start = Instant::now();
                 let doc = loro_016::LoroDoc::new();
                 doc.import(black_box(input)).unwrap();
-                total += start.elapsed();
                 black_box(doc);
             }
-            total
+            start.elapsed()
         });
     });
 
     group.bench_function(format!("{} - Import+GetAllValues", name), |b| {
         b.iter_custom(|iters| {
-            let mut total = std::time::Duration::ZERO;
+            let start = Instant::now();
             for _ in 0..iters {
-                let start = Instant::now();
                 let doc = loro_016::LoroDoc::new();
                 doc.import(black_box(input)).unwrap();
                 let value = doc.get_deep_value();
-                total += start.elapsed();
                 black_box(doc);
                 black_box(value);
             }
-            total
+            start.elapsed()
         });
     });
 
     group.bench_function(format!("{} - Import+GetAllValues+Edit", name), |b| {
         b.iter_custom(|iters| {
-            let mut total = std::time::Duration::ZERO;
+            let start = Instant::now();
             for _ in 0..iters {
-                let start = Instant::now();
                 let doc = loro_016::LoroDoc::new();
                 doc.import(black_box(input)).unwrap();
                 let value = doc.get_deep_value();
@@ -180,19 +169,18 @@ fn bench_version_016<F>(
                     .unwrap();
                 text.insert(0, "Hello world!").unwrap();
                 doc.commit();
-                total += start.elapsed();
                 black_box(doc);
                 black_box(value);
+                black_box(text);
             }
-            total
+            start.elapsed()
         });
     });
 
     group.bench_function(format!("{} - Import+GetAllValues+Edit+Export", name), |b| {
         b.iter_custom(|iters| {
-            let mut total = std::time::Duration::ZERO;
+            let start = Instant::now();
             for _ in 0..iters {
-                let start = Instant::now();
                 let doc = loro_016::LoroDoc::new();
                 doc.import(black_box(input)).unwrap();
                 let value = doc.get_deep_value();
@@ -206,11 +194,11 @@ fn bench_version_016<F>(
                 doc.commit();
                 let snapshot = export_fn(&doc);
                 black_box(snapshot);
-                total += start.elapsed();
                 black_box(doc);
                 black_box(value);
+                black_box(text);
             }
-            total
+            start.elapsed()
         });
     });
 }
