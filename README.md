@@ -81,3 +81,24 @@ Parse + get_deep_value() + PushNewCell time: 218.917µs
 Parse + get_deep_value() + PushNewCell + Export time: 813.167µs
 Memory Usage After All Operations 461.16 KB
 ```
+
+## v1.0.0 vs v1.6.0
+
+| name                       | task                            | time                   |
+| -------------------------- | ------------------------------- | ---------------------- |
+| Shallow Snapshot on v1.0.0 | Import                          | 162.239µs +- 1.587µs   |
+|                            | Import+GetAllValues             | 159.395µs +- 2.087µs   |
+|                            | Import+GetAllValues+Edit        | 156.98µs +- 1.12µs     |
+|                            | Import+GetAllValues+Edit+Export | 478.37µs +- 2.311µs    |
+| Shallow Snapshot on v1.6.0 | Import                          | 101.355µs +- 663ns     |
+|                            | Import+GetAllValues             | 111.738µs +- 1.078µs   |
+|                            | Import+GetAllValues+Edit        | 117.574µs +- 512ns     |
+|                            | Import+GetAllValues+Edit+Export | 447.566µs +- 1.676µs   |
+| Snapshot on v1.0.0         | Import                          | 469.373µs +- 5.855µs   |
+|                            | Import+GetAllValues             | 535.194µs +- 4.177µs   |
+|                            | Import+GetAllValues+Edit        | 535.87µs +- 5.271µs    |
+|                            | Import+GetAllValues+Edit+Export | 2.826544ms +- 14.125µs |
+| Snapshot on v1.6.0         | Import                          | 335.542µs +- 1.408µs   |
+|                            | Import+GetAllValues             | 530.588µs +- 3.494µs   |
+|                            | Import+GetAllValues+Edit        | 537.725µs +- 4.181µs   |
+|                            | Import+GetAllValues+Edit+Export | 2.639082ms +- 38.515µs |

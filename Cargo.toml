@@ -6,7 +6,8 @@ edition = "2021"
 [dependencies]
 loro-old = { git = "https://github.com/loro-dev/loro.git", tag = "loro-crdt@0.15.5-alpha.0", package = "loro" }
 loro-016 = { git = "https://github.com/loro-dev/loro.git", tag = "loro-crdt@0.16.12", package = "loro" }
-loro = { git = "https://github.com/loro-dev/loro.git", tag = "loro-crdt@1.0.0-beta.1", package = "loro" }
+loro-100 = { git = "https://github.com/loro-dev/loro.git", tag = "loro-crdt@1.0.0-beta.1", package = "loro" }
+loro = { git = "https://github.com/loro-dev/loro.git", rev = "e703e4353456d7ded8730e76e10456468b04e955", package = "loro" }
 dev-utils = { git = "https://github.com/loro-dev/loro.git", tag = "loro-crdt@1.0.0-beta.1", package = "dev-utils" }
 serde_columnar = "0.3.10"
 tracing = "0.1.40"
