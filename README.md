@@ -86,19 +86,19 @@ Memory Usage After All Operations 461.16 KB
 
 | name                       | task                            | time                   |
 | -------------------------- | ------------------------------- | ---------------------- |
-| Shallow Snapshot on v1.0.0 | Import                          | 162.239µs +- 1.587µs   |
-|                            | Import+GetAllValues             | 159.395µs +- 2.087µs   |
-|                            | Import+GetAllValues+Edit        | 156.98µs +- 1.12µs     |
-|                            | Import+GetAllValues+Edit+Export | 478.37µs +- 2.311µs    |
-| Shallow Snapshot on v1.6.0 | Import                          | 101.355µs +- 663ns     |
-|                            | Import+GetAllValues             | 111.738µs +- 1.078µs   |
-|                            | Import+GetAllValues+Edit        | 117.574µs +- 512ns     |
-|                            | Import+GetAllValues+Edit+Export | 447.566µs +- 1.676µs   |
-| Snapshot on v1.0.0         | Import                          | 469.373µs +- 5.855µs   |
-|                            | Import+GetAllValues             | 535.194µs +- 4.177µs   |
-|                            | Import+GetAllValues+Edit        | 535.87µs +- 5.271µs    |
-|                            | Import+GetAllValues+Edit+Export | 2.826544ms +- 14.125µs |
-| Snapshot on v1.6.0         | Import                          | 335.542µs +- 1.408µs   |
-|                            | Import+GetAllValues             | 530.588µs +- 3.494µs   |
-|                            | Import+GetAllValues+Edit        | 537.725µs +- 4.181µs   |
-|                            | Import+GetAllValues+Edit+Export | 2.639082ms +- 38.515µs |
+| Shallow Snapshot on v1.0.0 | Import                          | 150.667µs +- 1.823µs   |
+|                            | Import+GetAllValues             | 163.957µs +- 1.841µs   |
+|                            | Import+GetAllValues+Edit        | 173.971µs +- 2.03µs    |
+|                            | Import+GetAllValues+Edit+Export | 488.848µs +- 3.621µs   |
+| Shallow Snapshot on v1.6.0 | Import                          | 82.82µs +- 507ns       |
+|                            | Import+GetAllValues             | 90.376µs +- 393ns      |
+|                            | Import+GetAllValues+Edit        | 103.358µs +- 1.916µs   |
+|                            | Import+GetAllValues+Edit+Export | 419.463µs +- 2.316µs   |
+| Snapshot on v1.0.0         | Import                          | 466.425µs +- 3.879µs   |
+|                            | Import+GetAllValues             | 487.06µs +- 3.523µs    |
+|                            | Import+GetAllValues+Edit        | 541.477µs +- 9.067µs   |
+|                            | Import+GetAllValues+Edit+Export | 2.98382ms +- 80.537µs  |
+| Snapshot on v1.6.0         | Import                          | 201.934µs +- 854ns     |
+|                            | Import+GetAllValues             | 370.108µs +- 4.049µs   |
+|                            | Import+GetAllValues+Edit        | 386.497µs +- 3.509µs   |
+|                            | Import+GetAllValues+Edit+Export | 2.362296ms +- 28.258µs |
